@@ -1,3 +1,30 @@
+---
+name: Bug report / Feature request
+about: Create a report to help us improve
+title: ''
+labels: ''
+assignees: ''
+---
+
+### Description
+
+Describe the bug or feature clearly.
+
+### Steps to Reproduce (for bugs)
+1.
+2.
+3.
+
+### Expected Behavior
+
+### Actual Behavior
+
+### Environment
+- Python version:
+- OS:
+
+### Additional Context
+
 # Issue Template
 
 ## Summary
