@@ -50,4 +50,5 @@ Changelog = "https://github.com/PeymanSohi/envsmith/blob/main/CHANGELOG.md"
 include-package-data = true
 
 [tool.setuptools.packages.find]
-where = ["envsmith"]
+where = ["."]
+exclude = ["tests*", "examples*", "*.egg-info*"]
