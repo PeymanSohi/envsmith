@@ -1,0 +1,106 @@
+# Example schema file for smart-envloader
+# This file demonstrates various validation features
+
+# Basic types with simple format
+APP_NAME:
+  type: str
+  required: true
+  description: "Application name"
+
+ENVIRONMENT:
+  type: str
+  required: true
+  choices: ["development", "staging", "production"]
+  description: "Environment name"
+
+# Numeric types with constraints
+PORT:
+  type: int
+  required: true
+  min: 1
+  max: 65535
+  description: "TCP port number"
+
+TIMEOUT:
+  type: float
+  default: 30.0
+  min: 0.1
+  max: 300.0
+  description: "Request timeout in seconds"
+
+MAX_CONNECTIONS:
+  type: int
+  default: 100
+  min: 1
+  max: 10000
+  description: "Maximum database connections"
+
+# Boolean types
+DEBUG:
+  type: bool
+  default: false
+  description: "Enable debug mode"
+
+ENABLE_LOGGING:
+  type: bool
+  default: true
+  description: "Enable application logging"
+
+MAINTENANCE_MODE:
+  type: bool
+  default: false
+  description: "Enable maintenance mode"
+
+# List types
+ALLOWED_HOSTS:
+  type: list[str]
+  default: ["localhost", "127.0.0.1"]
+  min_len: 1
+  description: "List of allowed hostnames"
+
+FEATURE_FLAGS:
+  type: list[str]
+  default: []
+  description: "List of enabled feature flags"
+
+# Dictionary types
+DATABASE_CONFIG:
+  type: dict
+  description: "Database configuration object"
+
+API_KEYS:
+  type: list[str]
+  required: true
+  min_len: 1
+  description: "List of API keys"
+
+# String types with regex validation
+BASE_URL:
+  type: str
+  required: true
+  regex: "^https?://.+"
+  description: "Base URL for the application"
+
+# Optional types
+OPTIONAL_SETTING:
+  type: Optional[str]
+  default: null
+  description: "Optional setting that can be null"
+
+# Union types
+MODE:
+  type: Union[str, int]
+  default: "auto"
+  description: "Mode setting (string or integer)"
+
+# Literal types
+LOG_LEVEL:
+  type: Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
+  default: "INFO"
+  description: "Logging level"
+
+# Custom validation example
+CUSTOM_VALIDATED:
+  type: str
+  validator: "lambda x: len(x) > 5"
+  description: "String with custom validation (length > 5)"
