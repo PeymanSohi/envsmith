@@ -2,9 +2,9 @@
 CLI for envsmith.
 
 Doctest:
-$ python -m envsmith init
-$ python -m envsmith validate
-$ python -m envsmith export --format yaml
+$ python3 -m envsmith init
+$ python3 -m envsmith validate
+$ python3 -m envsmith export --format yaml
 """
 import argparse
 import sys
