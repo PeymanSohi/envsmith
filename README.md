@@ -439,6 +439,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Issues**: [GitHub Issues](https://github.com/PeymanSohi/envsmith/issues)
 - **Documentation**: [README](https://github.com/PeymanSohi/envsmith#readme)
 - **Examples**: Check the `examples/` directory
+## 💖 Support
+
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-blue?logo=github-sponsors)](https://github.com/sponsors/peymansohi)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-donate-yellow?logo=buymeacoffee)](https://www.buymeacoffee.com/peymansohi)
 
 ## 🔄 Changelog
 
